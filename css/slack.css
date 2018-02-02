@@ -1,0 +1,33 @@
+*{margin:0px;
+  padding:0px;
+  text-decoration: none;
+  border: none;
+}
+
+.sidebar{
+
+  position: fixed;
+  height: 100%;
+  background-color: #4D394B;
+  width: 220px;
+}
+
+hr{
+  border: 1px solid black;
+  border-width: 1px;
+}
+
+div{
+
+
+}
+
+
+#mainDiv{
+  margin-left: 280px;
+}
+
+.messageContainer{
+  border: 1px solid black;
+
+}

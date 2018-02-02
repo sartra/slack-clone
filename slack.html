@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Slack</title>
+
+  <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
+  <link rel='stylesheet' type='text/css' href='css/slack.css'>
+</head>
+
+<body>
+
+
+
+<div class='sidebar' >
+</div>
+
+<nav>
+<p style='margin-left: 500px; padding: 50px'> #help-desk </p>
+<hr>
+</nav>
+
+<div id='mainDiv'>
+
+
+
+</div>
+
+
+
+</body>
+<script src="./node_modules/expect/umd/expect.min.js"></script>
+<script src="./node_modules/mocha/mocha.js"></script>
+<script src="./test/polyfill.js"></script>
+<script src='./client/slack.js'></script>
+
+<script>
+  // If called from Mocha Phantom-JS on the command line then add the test scripts
+  // to the end of the document.
+  if (window.callPhantom) {
+    mocha.setup('bdd')
+    addScript('./test/online-chatroom-test.js');
+    addScript('./test/runMocha.js');
+  }
+
+  function addScript(path) {
+    var js = document.createElement('script');
+    js.type = 'text/javascript';
+    js.src = path;
+    document.body.appendChild(js);
+  }
+</script>
+
+</html>
